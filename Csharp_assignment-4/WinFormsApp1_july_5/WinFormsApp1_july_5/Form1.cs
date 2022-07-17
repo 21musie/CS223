@@ -47,6 +47,9 @@ namespace WinFormsApp1_july_5
             txtId.Clear();
             txtPhone.Clear();
         }
+        
+        private void dgvShowProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
