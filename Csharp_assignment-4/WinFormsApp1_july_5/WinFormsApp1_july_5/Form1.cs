@@ -1,3 +1,5 @@
+using System.Text.RegularExpressions;
+
 namespace WinFormsApp1_july_5
 {
     public partial class Form1 : Form
@@ -21,9 +23,16 @@ namespace WinFormsApp1_july_5
         private void btnRegister_Click(object sender, EventArgs e)
         {
             Student s = new Student();
-           
-            if (s.Fname != null && s.phone != null) {
-                 s.Fname = txtFName.Text;
+
+
+            Regex phone = new Regex(@"^[0-9] {2} $");
+            Regex name = new Regex(@"^[a-z]$");
+            if (name.IsMatch(txtFName.Text) & phone.IsMatch(txtPhone.Text) ) {
+                //bool a = false;
+                ;
+            }
+                if(txtFName.Text != null) { 
+           s.Fname = txtFName.Text;
             s.Lname = txtLName.Text;
             s.email = txtEmail.Text;
             s.id = txtId.Text;
@@ -31,11 +40,17 @@ namespace WinFormsApp1_july_5
             
             s.save();
                 MessageBox.Show("Registered sucessfully.");
-                btnClear_Click(s, e);}
+                btnClear_Click(s, e);
+
+                dgv1.DataSource = null;
+                dgv1.DataSource = Student.getAllStudents();
+                errorProvider1.SetError(txtFName, "Fix this Damn it!!");
+            }
             
             else
             {
-                MessageBox.Show("Registration Failed :( \n FILL YOUR INFORMATION PROPERly!");
+                
+                //MessageBox.Show("Registration Failed :( \n FILL YOUR INFORMATION PROPERly!");
             }
         }
 
@@ -47,9 +62,6 @@ namespace WinFormsApp1_july_5
             txtId.Clear();
             txtPhone.Clear();
         }
-        
-        private void dgvShowProducts_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
 
         private void btnCancel_Click(object sender, EventArgs e)
         {

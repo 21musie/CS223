@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Valued Customer\\source\\repos\\WinFormsApp1_july_5\\WinFormsApp1_july_5\\WinFormsApp1_july_5.csproj": {}
+    "C:\\Users\\Valued Customer\\Desktop\\Csharp\\CS223\\Csharp_assignment-4\\WinFormsApp1_july_5\\WinFormsApp1_july_5\\WinFormsApp1_july_5.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Valued Customer\\source\\repos\\WinFormsApp1_july_5\\WinFormsApp1_july_5\\WinFormsApp1_july_5.csproj": {
+    "C:\\Users\\Valued Customer\\Desktop\\Csharp\\CS223\\Csharp_assignment-4\\WinFormsApp1_july_5\\WinFormsApp1_july_5\\WinFormsApp1_july_5.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Valued Customer\\source\\repos\\WinFormsApp1_july_5\\WinFormsApp1_july_5\\WinFormsApp1_july_5.csproj",
+        "projectUniqueName": "C:\\Users\\Valued Customer\\Desktop\\Csharp\\CS223\\Csharp_assignment-4\\WinFormsApp1_july_5\\WinFormsApp1_july_5\\WinFormsApp1_july_5.csproj",
         "projectName": "WinFormsApp1_july_5",
-        "projectPath": "C:\\Users\\Valued Customer\\source\\repos\\WinFormsApp1_july_5\\WinFormsApp1_july_5\\WinFormsApp1_july_5.csproj",
+        "projectPath": "C:\\Users\\Valued Customer\\Desktop\\Csharp\\CS223\\Csharp_assignment-4\\WinFormsApp1_july_5\\WinFormsApp1_july_5\\WinFormsApp1_july_5.csproj",
         "packagesPath": "C:\\Users\\Valued Customer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Valued Customer\\source\\repos\\WinFormsApp1_july_5\\WinFormsApp1_july_5\\obj\\",
+        "outputPath": "C:\\Users\\Valued Customer\\Desktop\\Csharp\\CS223\\Csharp_assignment-4\\WinFormsApp1_july_5\\WinFormsApp1_july_5\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Valued Customer\\AppData\\Roaming\\NuGet\\NuGet.Config",

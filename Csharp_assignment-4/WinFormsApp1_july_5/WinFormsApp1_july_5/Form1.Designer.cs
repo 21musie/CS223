@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblName = new System.Windows.Forms.Label();
             this.lblLastName = new System.Windows.Forms.Label();
             this.lalblEmail = new System.Windows.Forms.Label();
@@ -43,6 +44,10 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
+            this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -168,7 +173,7 @@
             this.btnRegister.BackColor = System.Drawing.Color.Transparent;
             this.btnRegister.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnRegister.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnRegister.Location = new System.Drawing.Point(48, 404);
+            this.btnRegister.Location = new System.Drawing.Point(139, 404);
             this.btnRegister.Name = "btnRegister";
             this.btnRegister.Size = new System.Drawing.Size(107, 38);
             this.btnRegister.TabIndex = 2;
@@ -181,7 +186,7 @@
             this.btnClear.BackColor = System.Drawing.Color.Transparent;
             this.btnClear.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnClear.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnClear.Location = new System.Drawing.Point(151, 404);
+            this.btnClear.Location = new System.Drawing.Point(242, 404);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(107, 38);
             this.btnClear.TabIndex = 2;
@@ -194,7 +199,7 @@
             this.btnCancel.BackColor = System.Drawing.Color.Transparent;
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnCancel.Location = new System.Drawing.Point(254, 404);
+            this.btnCancel.Location = new System.Drawing.Point(345, 404);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(107, 38);
             this.btnCancel.TabIndex = 2;
@@ -224,12 +229,26 @@
             this.lblDate.TabIndex = 0;
             this.lblDate.Text = "Date";
             // 
+            // dgv1
+            // 
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Location = new System.Drawing.Point(394, 35);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.RowTemplate.Height = 25;
+            this.dgv1.Size = new System.Drawing.Size(638, 249);
+            this.dgv1.TabIndex = 4;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
-            this.ClientSize = new System.Drawing.Size(518, 488);
+            this.ClientSize = new System.Drawing.Size(1071, 488);
+            this.Controls.Add(this.dgv1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnClear);
@@ -247,6 +266,8 @@
             this.Controls.Add(this.lblName);
             this.Name = "Form1";
             this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,5 +290,7 @@
         private Button btnCancel;
         private DateTimePicker dateTimePicker1;
         private Label lblDate;
+        private DataGridView dgv1;
+        private ErrorProvider errorProvider1;
     }
 }
