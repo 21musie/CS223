@@ -4,10 +4,12 @@ namespace WinFormsApp1_july_5
 {
     public partial class Form1 : Form
     {
-        public Form1()
+        public Form1(string user)
         {
             InitializeComponent();
+        lblUser.Text = user;
         }
+
 
         private void textBox1_Leave(object sender, EventArgs e)
         {
@@ -25,13 +27,14 @@ namespace WinFormsApp1_july_5
             Student s = new Student();
 
 
-            Regex name = new Regex(@"^[a-z]$");
-            Regex phone = new Regex(@"^09[0-9]{8}$");
-            Regex email = new Regex(@"^[a-z]@gmail.com $");
-            Regex id = new Regex(@"^[a-z] {2} [0-9] {4} $");
+            Regex Rname = new Regex(@"^[A-Za-z]{3,15}$");
+            Regex Rphone = new Regex(@"^09[0-9]{8}$");
+            Regex Remail = new Regex(@"^[A-Za-z0-9]+@[a-z]+\.com$");
+            Regex Rid = new Regex(@"^[A-Za-z]{2}[0-9]{4}$");
 
-            if (name.IsMatch(txtFName.Text) & name.IsMatch(txtFName.Text) & name.IsMatch(txtLName.Text) & phone.IsMatch(txtPhone.Text) & id.IsMatch(txtId.Text) & email.IsMatch(txtEmail.Text))
-            { //
+            
+             if (Rname.IsMatch(txtFName.Text) & Rname.IsMatch(txtLName.Text) & Remail.IsMatch(txtEmail.Text) & Rid.IsMatch(txtId.Text) & Rphone.IsMatch(txtPhone.Text))
+            { 
                 errorProvider1.Clear();
 
                 s.Fname = txtFName.Text;
@@ -40,31 +43,41 @@ namespace WinFormsApp1_july_5
                 s.id = txtId.Text;
                 s.phone = txtPhone.Text;
 
-                s.save();
-                //MessageBox.Show("Registered sucessfully.");
-                btnClear_Click(s, e);
+                // validating terms and services
+                if (chkTerms.Checked)
+                {
+                    s.save();
+                    //MessageBox.Show("Registered sucessfully.");
+                    btnClear_Click(s, e);
 
-                dgv1.DataSource = null;
-                dgv1.DataSource = Student.getAllStudents();
-                //                errorProvider1.SetError(txtFName, "Fix this Damn it!!");
+                    dgv1.DataSource = null;
+                    dgv1.DataSource = Student.getAllStudents();
+                    //errorProvider1.SetError(txtFName, "Fix this Damn it!!");
+                }
+                else
+                {
+                    errorProvider1.SetError(chkTerms, "NO WAY !! Just check me.");
+                }
+                
             }
 
             else
             {
-                if (!name.IsMatch(txtFName.Text))
+                if (!Rname.IsMatch(txtFName.Text))
                     errorProvider1.SetError(txtFName, "Invalid name format!");
-               /* if (!name.IsMatch(txtLName.Text))
+                if (!Rname.IsMatch(txtLName.Text))
                     errorProvider1.SetError(txtLName, "Invalid name format");
-                if (!email.IsMatch(txtEmail.Text))
+                if (!Remail.IsMatch(txtEmail.Text))
                     errorProvider1.SetError(txtEmail, "Invalid E-mail format");
-                if (!id.IsMatch(txtId.Text))
+                if (!Rid.IsMatch(txtId.Text))
                     errorProvider1.SetError(txtId, "Invalid ID");
-                if (!phone.IsMatch(txtPhone.Text))
+                if (!Rphone.IsMatch(txtPhone.Text))
                     errorProvider1.SetError(txtPhone, "Invalid phone number");
-               */
-
+               
                 //MessageBox.Show("Registration Failed :( \n FILL YOUR INFORMATION PROPERly!");
             }
+            
+             
         }
         private void btnCancel_Click(object sender, EventArgs e)
         {
@@ -79,6 +92,16 @@ namespace WinFormsApp1_july_5
             txtEmail.Clear();
             txtId.Clear();
             txtPhone.Clear();
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
