@@ -24,13 +24,18 @@ namespace WinFormsApp1_july_5
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            Form1 form = new Form1(txtUsername.Text);
+            //Form1 form = new Form1(txtUsername.Text); //this was for the submit button to open the main form(Form1)
+
 
             if (txtPassword.Text == "admin")
             {
-                form.Show();
+                MDIcontainer container = new MDIcontainer();
+                container.Show();
+                Hide();
+                
+                //form.Show(); //This was also for the main form(Form1)
             }   
-            this.Hide();
+            // this.Hide(); //this was for the login form to hide
         }
     }
 }

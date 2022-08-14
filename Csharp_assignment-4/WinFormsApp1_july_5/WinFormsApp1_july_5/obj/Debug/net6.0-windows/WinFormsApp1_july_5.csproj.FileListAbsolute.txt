@@ -33,3 +33,4 @@ C:\Users\Valued Customer\Desktop\Csharp\CS223\Csharp_assignment-4\WinFormsApp1_j
 C:\Users\Valued Customer\Desktop\Csharp\CS223\Csharp_assignment-4\WinFormsApp1_july_5\WinFormsApp1_july_5\obj\Debug\net6.0-windows\WinFormsApp1_july_5.genruntimeconfig.cache
 C:\Users\Valued Customer\Desktop\Csharp\CS223\Csharp_assignment-4\WinFormsApp1_july_5\WinFormsApp1_july_5\obj\Debug\net6.0-windows\ref\WinFormsApp1_july_5.dll
 C:\Users\Valued Customer\Desktop\Csharp\CS223\Csharp_assignment-4\WinFormsApp1_july_5\WinFormsApp1_july_5\obj\Debug\net6.0-windows\WinFormsApp1_july_5.Login.resources
+C:\Users\Valued Customer\Desktop\Csharp\CS223\Csharp_assignment-4\WinFormsApp1_july_5\WinFormsApp1_july_5\obj\Debug\net6.0-windows\WinFormsApp1_july_5.MDIcontainer.resources

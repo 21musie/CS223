@@ -28,5 +28,11 @@ namespace WinFormsApp1_july_5
             Console.WriteLine("The student is sucessfully registered");
             students.Add(this);
             }
+
+        public static Student SearchByName(string name)
+        {
+            //Product p = new Product();
+            return students.Find(p => p.Fname == name);
+        }
     }
 }

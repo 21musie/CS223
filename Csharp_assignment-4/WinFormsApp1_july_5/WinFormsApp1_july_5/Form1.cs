@@ -103,5 +103,21 @@ namespace WinFormsApp1_july_5
         {
 
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string name;
+            name = txtSearch.Text;
+            Student s = new Student();
+            s = null;
+            if (Student.SearchByName(Name) != null)
+            {
+                s = Student.SearchByName(name);
+            }
+            if (s != null)
+                txtSearch.Text = s.Fname;
+            else
+                txtSearch.Text = "Student not found";
+        }
     }
 }
