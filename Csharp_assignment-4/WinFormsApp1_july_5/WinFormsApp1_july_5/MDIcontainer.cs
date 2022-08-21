@@ -28,5 +28,18 @@ namespace WinFormsApp1_july_5
             form.Dock = DockStyle.Fill;
             form.Show();
         }
+
+        private void displayAllStudentsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Close();
+            }
+            Display d= new Display();
+            d.MdiParent = this;
+            d.Dock = DockStyle.Fill;
+            d.Show();
+
+        }
     }
 }

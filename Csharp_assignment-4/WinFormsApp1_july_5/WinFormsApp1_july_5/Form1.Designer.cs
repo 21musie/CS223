@@ -44,7 +44,6 @@
             this.btnCancel = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lblDate = new System.Windows.Forms.Label();
-            this.dgv1 = new System.Windows.Forms.DataGridView();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblUser = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
@@ -55,9 +54,11 @@
             this.chkTerms = new System.Windows.Forms.CheckBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
+            this.btnDisplay = new System.Windows.Forms.Button();
+            this.dgv1 = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblName
@@ -239,18 +240,6 @@
             this.lblDate.TabIndex = 0;
             this.lblDate.Text = "Date";
             // 
-            // dgv1
-            // 
-            this.dgv1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Location = new System.Drawing.Point(421, 36);
-            this.dgv1.Name = "dgv1";
-            this.dgv1.RowTemplate.Height = 25;
-            this.dgv1.Size = new System.Drawing.Size(638, 249);
-            this.dgv1.TabIndex = 4;
-            // 
             // errorProvider1
             // 
             this.errorProvider1.ContainerControl = this;
@@ -297,7 +286,7 @@
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.Location = new System.Drawing.Point(510, 365);
+            this.groupBox1.Location = new System.Drawing.Point(485, 99);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(189, 100);
             this.groupBox1.TabIndex = 8;
@@ -317,7 +306,7 @@
             "C++",
             "Python",
             "Assembly"});
-            this.checkedListBox1.Location = new System.Drawing.Point(760, 357);
+            this.checkedListBox1.Location = new System.Drawing.Point(735, 91);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(181, 108);
             this.checkedListBox1.TabIndex = 9;
@@ -328,7 +317,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.Honeydew;
-            this.label1.Location = new System.Drawing.Point(716, 322);
+            this.label1.Location = new System.Drawing.Point(3, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(64, 20);
             this.label1.TabIndex = 10;
@@ -339,7 +328,7 @@
             this.chkTerms.AutoSize = true;
             this.chkTerms.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.chkTerms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.chkTerms.Location = new System.Drawing.Point(898, 357);
+            this.chkTerms.Location = new System.Drawing.Point(873, 91);
             this.chkTerms.Name = "chkTerms";
             this.chkTerms.Size = new System.Drawing.Size(161, 24);
             this.chkTerms.TabIndex = 11;
@@ -350,7 +339,7 @@
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSearch.Location = new System.Drawing.Point(898, 396);
+            this.txtSearch.Location = new System.Drawing.Point(873, 130);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(158, 25);
             this.txtSearch.TabIndex = 12;
@@ -358,7 +347,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(898, 427);
+            this.btnSearch.Location = new System.Drawing.Point(873, 165);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(112, 34);
             this.btnSearch.TabIndex = 13;
@@ -366,12 +355,38 @@
             this.btnSearch.UseVisualStyleBackColor = true;
             this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
+            // btnDisplay
+            // 
+            this.btnDisplay.Font = new System.Drawing.Font("Times New Roman", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnDisplay.Location = new System.Drawing.Point(838, 409);
+            this.btnDisplay.Name = "btnDisplay";
+            this.btnDisplay.Size = new System.Drawing.Size(196, 38);
+            this.btnDisplay.TabIndex = 14;
+            this.btnDisplay.Text = "Show The List";
+            this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.Click += new System.EventHandler(this.btnDisplay_Click);
+            // 
+            // dgv1
+            // 
+            this.dgv1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgv1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv1.Location = new System.Drawing.Point(459, 409);
+            this.dgv1.Name = "dgv1";
+            this.dgv1.RowTemplate.Height = 25;
+            this.dgv1.Size = new System.Drawing.Size(75, 38);
+            this.dgv1.TabIndex = 16;
+            this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellContentClick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(1071, 488);
+            this.Controls.Add(this.dgv1);
+            this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.chkTerms);
@@ -379,7 +394,6 @@
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblUser);
-            this.Controls.Add(this.dgv1);
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnClear);
@@ -397,10 +411,10 @@
             this.Controls.Add(this.lblName);
             this.Name = "Form1";
             this.Text = "Student Registration Form";
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -423,7 +437,6 @@
         private Button btnCancel;
         private DateTimePicker dateTimePicker1;
         private Label lblDate;
-        private DataGridView dgv1;
         private ErrorProvider errorProvider1;
         private Label lblUser;
         private Label label1;
@@ -434,5 +447,7 @@
         private CheckBox chkTerms;
         private Button btnSearch;
         private TextBox txtSearch;
+        private Button btnDisplay;
+        private DataGridView dgv1;
     }
 }

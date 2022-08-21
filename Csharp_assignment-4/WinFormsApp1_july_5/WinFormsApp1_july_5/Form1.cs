@@ -52,6 +52,7 @@ namespace WinFormsApp1_july_5
 
                     dgv1.DataSource = null;
                     dgv1.DataSource = Student.getAllStudents();
+
                     //errorProvider1.SetError(txtFName, "Fix this Damn it!!");
                 }
                 else
@@ -118,6 +119,21 @@ namespace WinFormsApp1_july_5
                 txtSearch.Text = s.Fname;
             else
                 txtSearch.Text = "Student not found";
+        }
+
+        private void btnDisplay_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("DISPLAYING!!!");
+            //Display d = new Display();
+            //d.Show();
+            //Hide();
+            //dgv1.DataSource = null;
+            //dgv1.DataSource = Student.getAllStudents();
+        }
+
+        private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
