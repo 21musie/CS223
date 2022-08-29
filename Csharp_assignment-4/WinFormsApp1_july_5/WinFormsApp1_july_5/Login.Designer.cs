@@ -117,6 +117,7 @@
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Login";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -21,5 +21,29 @@ namespace WinFormsApp1_july_5
         {
 
         }
+
+        private void studentCard_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Card Clicked.");
+        }
+
+        private void Display_Load(object sender, EventArgs e)
+        {
+            foreach (var stud in Student.getAllStudents())
+            {
+                studentCard s = new studentCard();
+                s.sname = stud.Fname;
+                s.sid = stud.id;
+                s.semail = stud.email;
+
+                s.Click += studentCard_Click;
+               flowLayoutPanel1.Controls.Add(s);
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

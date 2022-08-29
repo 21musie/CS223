@@ -123,7 +123,16 @@ namespace WinFormsApp1_july_5
 
         private void btnDisplay_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("DISPLAYING!!!");
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Close();
+            }
+            Display d = new Display();
+            // d.MdiParent = this;
+            d.Dock = DockStyle.Fill;
+            d.Show();
+
+            //MessageBox.Show("DISPLAYING!!!");
             //Display d = new Display();
             //d.Show();
             //Hide();

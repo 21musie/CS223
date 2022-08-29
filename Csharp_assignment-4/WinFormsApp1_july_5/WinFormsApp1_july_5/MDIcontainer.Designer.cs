@@ -35,12 +35,12 @@
             this.uPDATEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dELETEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dELETEToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.displayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.displayAllStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.departmentToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.computerScienceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.softwareEngineeringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.displayToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.displayAllStudentsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -48,8 +48,8 @@
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.studentsToolStripMenuItem,
-            this.departmentToolStripMenuItem,
-            this.displayToolStripMenuItem});
+            this.displayToolStripMenuItem,
+            this.departmentToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -70,27 +70,42 @@
             // aDDToolStripMenuItem
             // 
             this.aDDToolStripMenuItem.Name = "aDDToolStripMenuItem";
-            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aDDToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.aDDToolStripMenuItem.Text = "ADD";
             this.aDDToolStripMenuItem.Click += new System.EventHandler(this.aDDToolStripMenuItem_Click);
             // 
             // uPDATEToolStripMenuItem
             // 
             this.uPDATEToolStripMenuItem.Name = "uPDATEToolStripMenuItem";
-            this.uPDATEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.uPDATEToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.uPDATEToolStripMenuItem.Text = "UPDATE";
             // 
             // dELETEToolStripMenuItem
             // 
             this.dELETEToolStripMenuItem.Name = "dELETEToolStripMenuItem";
-            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.dELETEToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
             this.dELETEToolStripMenuItem.Text = "SEARCH";
             // 
             // dELETEToolStripMenuItem1
             // 
             this.dELETEToolStripMenuItem1.Name = "dELETEToolStripMenuItem1";
-            this.dELETEToolStripMenuItem1.Size = new System.Drawing.Size(180, 22);
+            this.dELETEToolStripMenuItem1.Size = new System.Drawing.Size(118, 22);
             this.dELETEToolStripMenuItem1.Text = "DELETE";
+            // 
+            // displayToolStripMenuItem
+            // 
+            this.displayToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.displayAllStudentsToolStripMenuItem});
+            this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
+            this.displayToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
+            this.displayToolStripMenuItem.Text = "Display";
+            // 
+            // displayAllStudentsToolStripMenuItem
+            // 
+            this.displayAllStudentsToolStripMenuItem.Name = "displayAllStudentsToolStripMenuItem";
+            this.displayAllStudentsToolStripMenuItem.Size = new System.Drawing.Size(175, 22);
+            this.displayAllStudentsToolStripMenuItem.Text = "Display all students";
+            this.displayAllStudentsToolStripMenuItem.Click += new System.EventHandler(this.displayAllStudentsToolStripMenuItem_Click);
             // 
             // departmentToolStripMenuItem
             // 
@@ -118,21 +133,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // displayToolStripMenuItem
-            // 
-            this.displayToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.displayAllStudentsToolStripMenuItem});
-            this.displayToolStripMenuItem.Name = "displayToolStripMenuItem";
-            this.displayToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
-            this.displayToolStripMenuItem.Text = "Display";
-            // 
-            // displayAllStudentsToolStripMenuItem
-            // 
-            this.displayAllStudentsToolStripMenuItem.Name = "displayAllStudentsToolStripMenuItem";
-            this.displayAllStudentsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.displayAllStudentsToolStripMenuItem.Text = "Display all students";
-            this.displayAllStudentsToolStripMenuItem.Click += new System.EventHandler(this.displayAllStudentsToolStripMenuItem_Click);
-            // 
             // MDIcontainer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -143,6 +143,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MDIcontainer";
             this.Text = "MDIcontainer";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

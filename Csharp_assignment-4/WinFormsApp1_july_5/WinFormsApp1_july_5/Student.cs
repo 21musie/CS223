@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Data.SqlClient;
 
 namespace WinFormsApp1_july_5
 {
@@ -11,7 +12,7 @@ namespace WinFormsApp1_july_5
     {
         static List<Student> students = new List<Student>();
 
-        
+        string connectionString = @"Data Source=DESKTOP-8KKDGPL; Initial Catalog=student; Integreted Security = true";
 
         public static List<Student> getAllStudents()
         {
@@ -27,7 +28,18 @@ namespace WinFormsApp1_july_5
         {
             Console.WriteLine("The student is sucessfully registered");
             students.Add(this);
-            }
+
+        //    try
+        //    {
+        //     //   SqlConnection conn = new SqlConnection(connectionString);
+        //      //  conn.open();
+        //        MessageBox.Show("Connected");
+        //    }
+        //    catch (Exception e)
+        //    {
+        //        MessageBox.Show("Unable to Connect");
+        //    }
+        }
 
         public static Student SearchByName(string name)
         {

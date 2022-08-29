@@ -29,74 +29,51 @@
         private void InitializeComponent()
         {
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
-            this.userControl11 = new WinFormsApp1_july_5.UserControl1();
-            this.userControl12 = new WinFormsApp1_july_5.UserControl1();
-            this.dgv1 = new System.Windows.Forms.DataGridView();
-            this.flowLayoutPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
+            this.btn_close = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
             // 
-            this.flowLayoutPanel1.Controls.Add(this.userControl11);
-            this.flowLayoutPanel1.Controls.Add(this.userControl12);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 292);
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(799, 156);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(1235, 166);
             this.flowLayoutPanel1.TabIndex = 16;
             this.flowLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
             // 
-            // userControl11
+            // btn_close
             // 
-            this.userControl11.AutoScroll = true;
-            this.userControl11.Location = new System.Drawing.Point(3, 3);
-            this.userControl11.Name = "userControl11";
-            this.userControl11.NameOfUser = "Musie Mengesha";
-            this.userControl11.Size = new System.Drawing.Size(155, 153);
-            this.userControl11.TabIndex = 0;
-            this.userControl11.UserName = "Student name:";
-            // 
-            // userControl12
-            // 
-            this.userControl12.AutoScroll = true;
-            this.userControl12.Location = new System.Drawing.Point(164, 3);
-            this.userControl12.Name = "userControl12";
-            this.userControl12.NameOfUser = "";
-            this.userControl12.Size = new System.Drawing.Size(155, 153);
-            this.userControl12.TabIndex = 0;
-            this.userControl12.UserName = "Student name:";
-            // 
-            // dgv1
-            // 
-            this.dgv1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgv1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
-            this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Location = new System.Drawing.Point(0, 0);
-            this.dgv1.Name = "dgv1";
-            this.dgv1.RowTemplate.Height = 25;
-            this.dgv1.Size = new System.Drawing.Size(799, 289);
-            this.dgv1.TabIndex = 17;
+            this.btn_close.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.btn_close.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btn_close.Location = new System.Drawing.Point(1160, 408);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(75, 37);
+            this.btn_close.TabIndex = 17;
+            this.btn_close.Text = "Hide";
+            this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.button1_Click);
             // 
             // Display
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.dgv1);
+            this.ClientSize = new System.Drawing.Size(1256, 467);
+            this.Controls.Add(this.btn_close);
             this.Controls.Add(this.flowLayoutPanel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Display";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Display";
-            this.flowLayoutPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv1)).EndInit();
+            this.Load += new System.EventHandler(this.Display_Load);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private FlowLayoutPanel flowLayoutPanel1;
-        private UserControl1 userControl11;
-        private UserControl1 userControl12;
-        private DataGridView dgv1;
+        private Button btn_close;
     }
 }
