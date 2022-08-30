@@ -12,10 +12,26 @@ namespace WinFormsApp1_july_5
     {
         static List<Student> students = new List<Student>();
 
-        string connectionString = @"Data Source=DESKTOP-8KKDGPL; Initial Catalog=student; Integreted Security = true";
-
+        
         public static List<Student> getAllStudents()
         {
+            //string select = "select * from studentTable";
+            //ExecuteReader er = new ExecuteReader(insert);
+
+            //List<Student> temp = new List<Student>();
+
+            //while (er.Read())
+           // {
+            //    Student s = new Student();
+            //    s.Fname = er["fname"];
+            //    s.Lname = er["fname"];
+            //    s.email = er["fname"];
+            //    s.id = er["id"];
+            //    s.phone = er["phone"];
+            //    temp.Add(s);
+            //}
+            //return temp;
+
             return students;
         }
         public String Fname { get; set; }
@@ -28,17 +44,22 @@ namespace WinFormsApp1_july_5
         {
             Console.WriteLine("The student is sucessfully registered");
             students.Add(this);
+            //string connectionString = @"Data Source=.; Initial Catalog=student; Integreted Security = true";
 
-        //    try
-        //    {
-        //     //   SqlConnection conn = new SqlConnection(connectionString);
-        //      //  conn.open();
-        //        MessageBox.Show("Connected");
-        //    }
-        //    catch (Exception e)
-        //    {
-        //        MessageBox.Show("Unable to Connect");
-        //    }
+            //    try
+            //    {
+            //     //   SqlConnection conn = new SqlConnection(connectionString);
+            //      //  conn.open();
+            //        MessageBox.Show("Connected");
+            //    }
+            //    catch (Exception e)
+            //    {
+            //        MessageBox.Show("Unable to Connect");
+            //    }
+
+            //string query = "insert into studentTable values ( '+ this.fname + "','" + this.Fname + "','" + this.Lname + "','" + this.email + "','" + this.id + "','" + this.phone  ') ";
+            //ExecuteNonQuery enq = new ExecuteNonQuery(query);
+
         }
 
         public static Student SearchByName(string name)

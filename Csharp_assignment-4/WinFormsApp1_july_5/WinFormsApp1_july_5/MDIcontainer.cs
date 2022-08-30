@@ -23,7 +23,7 @@ namespace WinFormsApp1_july_5
             {
                 ActiveMdiChild.Close();
             }
-            Form1 form = new Form1("ADD");
+            Form1 form = new Form1("admin");
             form.MdiParent = this;
             form.Dock = DockStyle.Fill;
             form.Show();

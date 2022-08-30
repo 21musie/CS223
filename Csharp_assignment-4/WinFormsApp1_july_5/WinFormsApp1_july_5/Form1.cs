@@ -53,6 +53,8 @@ namespace WinFormsApp1_july_5
                     dgv1.DataSource = null;
                     dgv1.DataSource = Student.getAllStudents();
 
+
+
                     //errorProvider1.SetError(txtFName, "Fix this Damn it!!");
                 }
                 else
@@ -93,6 +95,13 @@ namespace WinFormsApp1_july_5
             txtEmail.Clear();
             txtId.Clear();
             txtPhone.Clear();
+            radioButton1.Checked = false;
+            radioButton2.Checked = false;
+            for (int i = 0; i < 6; i++)
+            {
+                checkedListBox1.SetItemChecked(i, false);
+            }
+            chkTerms.Checked = false;
         }
 
         private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -141,6 +150,11 @@ namespace WinFormsApp1_july_5
         }
 
         private void dgv1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }

@@ -50,7 +50,6 @@
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
-            this.label1 = new System.Windows.Forms.Label();
             this.chkTerms = new System.Windows.Forms.CheckBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
@@ -286,7 +285,7 @@
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.radioButton2);
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.groupBox1.Location = new System.Drawing.Point(485, 99);
+            this.groupBox1.Location = new System.Drawing.Point(473, 36);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(189, 100);
             this.groupBox1.TabIndex = 8;
@@ -306,40 +305,29 @@
             "C++",
             "Python",
             "Assembly"});
-            this.checkedListBox1.Location = new System.Drawing.Point(735, 91);
+            this.checkedListBox1.Location = new System.Drawing.Point(724, 36);
             this.checkedListBox1.Name = "checkedListBox1";
             this.checkedListBox1.Size = new System.Drawing.Size(132, 108);
             this.checkedListBox1.TabIndex = 9;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.ForeColor = System.Drawing.Color.Honeydew;
-            this.label1.Location = new System.Drawing.Point(3, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 20);
-            this.label1.TabIndex = 10;
-            this.label1.Text = "Courses";
-            // 
             // chkTerms
             // 
             this.chkTerms.AutoSize = true;
             this.chkTerms.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.chkTerms.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.chkTerms.Location = new System.Drawing.Point(873, 91);
+            this.chkTerms.ForeColor = System.Drawing.Color.Red;
+            this.chkTerms.Location = new System.Drawing.Point(873, 36);
             this.chkTerms.Name = "chkTerms";
-            this.chkTerms.Size = new System.Drawing.Size(161, 24);
+            this.chkTerms.Size = new System.Drawing.Size(198, 24);
             this.chkTerms.TabIndex = 11;
-            this.chkTerms.Text = "Terms and services";
+            this.chkTerms.Text = "Accept Terms and Policy";
             this.chkTerms.UseVisualStyleBackColor = true;
             this.chkTerms.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSearch.Location = new System.Drawing.Point(873, 130);
+            this.txtSearch.Location = new System.Drawing.Point(873, 79);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(158, 25);
             this.txtSearch.TabIndex = 12;
@@ -347,7 +335,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnSearch.Location = new System.Drawing.Point(873, 165);
+            this.btnSearch.Location = new System.Drawing.Point(873, 110);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(112, 34);
             this.btnSearch.TabIndex = 13;
@@ -372,10 +360,10 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgv1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.dgv1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv1.Location = new System.Drawing.Point(459, 409);
+            this.dgv1.Location = new System.Drawing.Point(582, 244);
             this.dgv1.Name = "dgv1";
             this.dgv1.RowTemplate.Height = 25;
-            this.dgv1.Size = new System.Drawing.Size(75, 38);
+            this.dgv1.Size = new System.Drawing.Size(452, 96);
             this.dgv1.TabIndex = 16;
             this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellContentClick);
             // 
@@ -390,7 +378,6 @@
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.chkTerms);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.checkedListBox1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.lblUser);
@@ -439,7 +426,6 @@
         private Label lblDate;
         private ErrorProvider errorProvider1;
         private Label lblUser;
-        private Label label1;
         private CheckedListBox checkedListBox1;
         private GroupBox groupBox1;
         private RadioButton radioButton1;
