@@ -15,6 +15,7 @@ namespace WinFormsApp1_july_5
         
         public static List<Student> getAllStudents()
         {
+            conn.open();
             string select = "select * from studentTable";
             ExecuteReader er = new ExecuteReader(select);
 
