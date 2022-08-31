@@ -64,7 +64,7 @@ namespace WinFormsApp1_july_5
 
             string query = "insert into studentTable values ( '+ this.fname + "','" + this.Fname + "','" + this.Lname + "','" + this.email + "','" + this.id + "','" + this.phone  ') ";
             //ExecuteNonQuery enq = new ExecuteNonQuery(query);
-            SqlCommand cmd = new SqlCommand(select ,conn);
+            SqlCommand cmd = new SqlCommand(query ,conn);
             cmd.ExecuteNonQuery();
         }
 
