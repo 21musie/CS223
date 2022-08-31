@@ -49,7 +49,7 @@ namespace WinFormsApp1_july_5
         {
             Console.WriteLine("The student is sucessfully registered");
             students.Add(this);
-            string connectionString = @"Data Source=.; Initial Catalog=student; Integreted Security = true";
+            string connectionString = @"Data Source=.;database=studens ;Initial Catalog=student; Integreted Security = true";
 
                 try
                 {
