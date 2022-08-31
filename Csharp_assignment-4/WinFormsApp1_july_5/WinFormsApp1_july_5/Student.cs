@@ -15,24 +15,24 @@ namespace WinFormsApp1_july_5
         
         public static List<Student> getAllStudents()
         {
-            //string select = "select * from studentTable";
-            //ExecuteReader er = new ExecuteReader(select);
+            string select = "select * from studentTable";
+            ExecuteReader er = new ExecuteReader(select);
 
-            //List<Student> temp = new List<Student>();
+            List<Student> temp = new List<Student>();
 
-            //while (er.Read())
-           // {
-            //    Student s = new Student();
-            //    s.Fname = er["fname"];
-            //    s.Lname = er["fname"];
-            //    s.email = er["fname"];
-            //    s.id = er["id"];
-            //    s.phone = er["phone"];
-            //    temp.Add(s);
-            //}
-            //return temp;
+            while (er.Read())
+            {
+                Student s = new Student();
+                s.Fname = er["fname"];
+                s.Lname = er["fname"];
+                s.email = er["fname"];
+                s.id = er["id"];
+                s.phone = er["phone"];
+                temp.Add(s);
+            }
+            return temp;
 
-            return students;
+           // return students;
         }
         public String Fname { get; set; }
         public String Lname { get; set; }
@@ -44,21 +44,21 @@ namespace WinFormsApp1_july_5
         {
             Console.WriteLine("The student is sucessfully registered");
             students.Add(this);
-            //string connectionString = @"Data Source=.; Initial Catalog=student; Integreted Security = true";
+            string connectionString = @"Data Source=.; Initial Catalog=student; Integreted Security = true";
 
-            //    try
-            //    {
-            //     //   SqlConnection conn = new SqlConnection(connectionString);
-            //      //  conn.open();
-            //        MessageBox.Show("Connected");
-            //    }
-            //    catch (Exception e)
-            //    {
-            //        MessageBox.Show("Unable to Connect");
-            //    }
+                try
+                {
+                    SqlConnection conn = new SqlConnection(connectionString);
+                    conn.open();
+                    MessageBox.Show("Connected");
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Unable to Connect");
+                }
 
-            //string query = "insert into studentTable values ( '+ this.fname + "','" + this.Fname + "','" + this.Lname + "','" + this.email + "','" + this.id + "','" + this.phone  ') ";
-            //ExecuteNonQuery enq = new ExecuteNonQuery(query);
+            string query = "insert into studentTable values ( '+ this.fname + "','" + this.Fname + "','" + this.Lname + "','" + this.email + "','" + this.id + "','" + this.phone  ') ";
+            ExecuteNonQuery enq = new ExecuteNonQuery(query);
 
         }
 
