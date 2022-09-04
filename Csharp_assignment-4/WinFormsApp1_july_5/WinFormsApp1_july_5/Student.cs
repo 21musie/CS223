@@ -95,7 +95,8 @@ namespace WinFormsApp1_july_5
 
             string query = "insert into studentTable values ( '+ this.fname + ',' + this.Fname + ',' + this.Lname + ',' + this.email + ',' + this.id + ',' + this.phone ') ";
             
-            //ExecuteNonQuery enq = new ExecuteNonQuery(query);
+=======
+            string connectionString = @"Data Source=.;database=student ;Initial Catalog=student; Integreted Security = true";
 
                 try
                 {
