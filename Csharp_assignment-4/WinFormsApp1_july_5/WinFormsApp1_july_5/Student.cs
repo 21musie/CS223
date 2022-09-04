@@ -9,28 +9,34 @@ using System.Data.SqlClient;
 namespace WinFormsApp1_july_5
 {
     internal class Student
-    {
+    { 
         static List<Student> students = new List<Student>();
 
-        
         public static List<Student> getAllStudents()
         {
-            //string select = "select * from studentTable";
+            string connectionString = @"Data Source=.; Initial Catalog=student; Integrated Security=true";
+            SqlConnection conn = new SqlConnection(connectionString);
+            conn.Open();
+
+            string select = "select * from studentTable";
             //ExecuteReader er = new ExecuteReader(insert);
+            SqlCommand cmd = new SqlCommand( select , conn);
+            SqlDataReader sqlDataReader = cmd.ExecuteReader();
 
-            //List<Student> temp = new List<Student>();
 
-            //while (er.Read())
-           // {
-            //    Student s = new Student();
-            //    s.Fname = er["fname"];
-            //    s.Lname = er["fname"];
-            //    s.email = er["fname"];
-            //    s.id = er["id"];
-            //    s.phone = er["phone"];
-            //    temp.Add(s);
-            //}
-            //return temp;
+            List<Student> temp = new List<Student>();
+
+            while (sqlDataReader.Read())
+            {
+               // Student s = new Student();
+              //  s.Fname = sqlDataReader["fname"];
+              // s.Lname = sqlDataReader["fname"];
+              //  s.email = sqlDataReader["fname"];
+              //  s.id = sqlDataReader["id"];
+              //  s.phone = sqlDataReader["phone"];
+               // temp.Add(s);
+            }
+            return temp;
 
             return students;
         }
@@ -44,20 +50,23 @@ namespace WinFormsApp1_july_5
         {
             Console.WriteLine("The student is sucessfully registered");
             students.Add(this);
-            //string connectionString = @"Data Source=.; Initial Catalog=student; Integreted Security = true";
 
-            //    try
-            //    {
-            //     //   SqlConnection conn = new SqlConnection(connectionString);
-            //      //  conn.open();
-            //        MessageBox.Show("Connected");
-            //    }
-            //    catch (Exception e)
-            //    {
-            //        MessageBox.Show("Unable to Connect");
-            //    }
+            string connectionString = @"Data Source=.; Initial Catalog=student; Integreted Security = true";
 
-            //string query = "insert into studentTable values ( '+ this.fname + "','" + this.Fname + "','" + this.Lname + "','" + this.email + "','" + this.id + "','" + this.phone  ') ";
+            try
+            {
+                SqlConnection conn = new SqlConnection(connectionString);
+                conn.Open();
+                MessageBox.Show("Connected");
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Unable to Connect");
+            }
+
+
+            string query = "insert into studentTable values ( '+ this.fname + ',' + this.Fname + ',' + this.Lname + ',' + this.email + ',' + this.id + ',' + this.phone ') ";
+            
             //ExecuteNonQuery enq = new ExecuteNonQuery(query);
 
         }
