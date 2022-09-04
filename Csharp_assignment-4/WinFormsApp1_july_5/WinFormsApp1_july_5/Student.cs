@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace WinFormsApp1_july_5
@@ -11,6 +12,7 @@ namespace WinFormsApp1_july_5
     internal class Student
     { 
         static List<Student> students = new List<Student>();
+<<<<<<< HEAD
 
         public static List<Student> getAllStudents()
         {
@@ -35,10 +37,35 @@ namespace WinFormsApp1_july_5
               //  s.id = sqlDataReader["id"];
               //  s.phone = sqlDataReader["phone"];
                // temp.Add(s);
+=======
+        
+        
+        public static List<Student> getAllStudents()
+        {
+           
+            conn.open();
+            string select = "select * from studentTable";
+           // ExecuteReader er = new ExecuteReader(select);
+            SqlCommand cmd = new SqlCommand(select ,conn);
+            cmd.ExecuteReader();
+
+            List<Student> temp = new List<Student>();
+
+            while (er.Read())
+            {
+                Student s = new Student();
+                s.Fname = er["fname"];
+                s.Lname = er["fname"];
+                s.email = er["fname"];
+                s.id = er["id"];
+                s.phone = er["phone"];
+                temp.Add(s);
+>>>>>>> 7cb60ae8fe7aed9bb3d17c2701f9299ac53b9de6
             }
             return temp;
 
             return students;
+           // return students;
         }
         public String Fname { get; set; }
         public String Lname { get; set; }
@@ -69,6 +96,22 @@ namespace WinFormsApp1_july_5
             
             //ExecuteNonQuery enq = new ExecuteNonQuery(query);
 
+                try
+                {
+                    SqlConnection conn = new SqlConnection(connectionString);
+                    conn.open();
+                    MessageBox.Show("Connected");
+                }
+                catch (Exception e)
+                {
+                    MessageBox.Show("Unable to Connect");
+                }
+
+            string query = "insert into studentTable values ( '+ this.fname + "','" + this.Fname + "','" + this.Lname + "','" + this.email + "','" + this.id + "','" + this.phone  ') ";
+>>>>>>> 7cb60ae8fe7aed9bb3d17c2701f9299ac53b9de6
+            //ExecuteNonQuery enq = new ExecuteNonQuery(query);
+            SqlCommand cmd = new SqlCommand(query ,conn);
+            cmd.ExecuteNonQuery();
         }
 
         public static Student SearchByName(string name)
