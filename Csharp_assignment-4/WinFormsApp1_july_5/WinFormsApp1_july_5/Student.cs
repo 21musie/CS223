@@ -77,6 +77,7 @@ namespace WinFormsApp1_july_5
         {
             Console.WriteLine("The student is sucessfully registered");
             students.Add(this);
+<<<<<<< HEAD
 
             string connectionString = @"Data Source=.; Initial Catalog=student; Integreted Security = true";
 
