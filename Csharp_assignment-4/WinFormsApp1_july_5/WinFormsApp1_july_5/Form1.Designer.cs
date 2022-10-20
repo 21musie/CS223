@@ -55,6 +55,7 @@
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDisplay = new System.Windows.Forms.Button();
             this.dgv1 = new System.Windows.Forms.DataGridView();
+            this.btn_Auto = new Guna.UI2.WinForms.Guna2CircleButton();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv1)).BeginInit();
@@ -367,12 +368,30 @@
             this.dgv1.TabIndex = 16;
             this.dgv1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgv1_CellContentClick);
             // 
+            // btn_Auto
+            // 
+            this.btn_Auto.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Auto.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btn_Auto.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btn_Auto.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btn_Auto.FillColor = System.Drawing.Color.Red;
+            this.btn_Auto.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.btn_Auto.ForeColor = System.Drawing.Color.White;
+            this.btn_Auto.Location = new System.Drawing.Point(12, 427);
+            this.btn_Auto.Name = "btn_Auto";
+            this.btn_Auto.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btn_Auto.Size = new System.Drawing.Size(59, 49);
+            this.btn_Auto.TabIndex = 19;
+            this.btn_Auto.Text = "AUTO FILL";
+            this.btn_Auto.Click += new System.EventHandler(this.btn_Auto_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(1071, 488);
+            this.Controls.Add(this.btn_Auto);
             this.Controls.Add(this.dgv1);
             this.Controls.Add(this.btnDisplay);
             this.Controls.Add(this.btnSearch);
@@ -435,5 +454,6 @@
         private TextBox txtSearch;
         private Button btnDisplay;
         private DataGridView dgv1;
+        private Guna.UI2.WinForms.Guna2CircleButton btn_Auto;
     }
 }

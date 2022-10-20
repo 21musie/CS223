@@ -6,6 +6,42 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v6.0": {
+      "Guna.UI2.WinForms/2.0.3.5": {
+        "runtime": {
+          "lib/net40/Guna.UI2.dll": {
+            "assemblyVersion": "2.0.3.5",
+            "fileVersion": "2.0.3.5"
+          }
+        }
+      },
+      "Krypton.Components.Suite/4.5.9": {
+        "runtime": {
+          "lib/net20/ComponentFactory.Krypton.Design.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net20/ComponentFactory.Krypton.Docking.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net20/ComponentFactory.Krypton.Navigator.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net20/ComponentFactory.Krypton.Ribbon.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net20/ComponentFactory.Krypton.Toolkit.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          },
+          "lib/net20/ComponentFactory.Krypton.Workspace.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.0"
+          }
+        }
+      },
       "Microsoft.NETCore.Platforms/3.1.0": {},
       "Microsoft.Win32.Registry/4.7.0": {
         "dependencies": {
@@ -139,6 +175,20 @@
     }
   },
   "libraries": {
+    "Guna.UI2.WinForms/2.0.3.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-nd6IAGX4u+sCx9i6PeBfkb6Y+xoayIsoMhndlJoN1L5kE6QbYjDMSHiF+9/nkFhcKx+eNaXzemyKbCY4W7lBEA==",
+      "path": "guna.ui2.winforms/2.0.3.5",
+      "hashPath": "guna.ui2.winforms.2.0.3.5.nupkg.sha512"
+    },
+    "Krypton.Components.Suite/4.5.9": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-zwr6tGf1CYfRjnu0rDpNTXds7DGFT1UJAIOf+FJOoLcdOG7t0UuZIFJkB3xqm7fwCtxkj5yi6vBCftfaINhkfw==",
+      "path": "krypton.components.suite/4.5.9",
+      "hashPath": "krypton.components.suite.4.5.9.nupkg.sha512"
+    },
     "Microsoft.NETCore.Platforms/3.1.0": {
       "type": "package",
       "serviceable": true,

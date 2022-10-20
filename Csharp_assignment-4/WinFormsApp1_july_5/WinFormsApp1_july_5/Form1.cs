@@ -158,5 +158,29 @@ namespace WinFormsApp1_july_5
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            txtFName.Text = "Abebe";
+            txtLName.Text = "Kebede";
+            txtEmail.Text = "abc@gmail.com";
+            txtId.Text = "ab0021";
+            txtPhone.Text = "0921212121";
+        }
+
+        private void btn_Auto_Click(object sender, EventArgs e)
+        {
+            txtFName.Text = "Abebe";
+            txtLName.Text = "Kebede";
+            txtEmail.Text = "abc@gmail.com";
+            txtId.Text = "ab0021";
+            txtPhone.Text = "0921212121";
+            chkTerms.Checked = true;
+        }
     }
 }

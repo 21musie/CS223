@@ -9,6 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Guna.UI2.WinForms" Version="2.0.3.5" />
+    <PackageReference Include="Krypton.Components.Suite" Version="4.5.9" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
   </ItemGroup>
 

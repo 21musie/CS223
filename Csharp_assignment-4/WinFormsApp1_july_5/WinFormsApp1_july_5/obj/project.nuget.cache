@@ -1,9 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "SSU9MyCdIGwhgvPp2kiisXGxBMOyMa20mgutCON8QFnAEz2vXYOsnIv7fuEKqstbmp30CFnwAndjVMM8Q2QroQ==",
+  "dgSpecHash": "wP6ppPc3i7LRF6QkE1u5nAlH0anuwFcnM/r8q/ZBndPj5h4cRlnD8oM4X53AslEvne4qYG55rSACGp+xNULZCg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Valued Customer\\Desktop\\Csharp\\CS223\\Csharp_assignment-4\\WinFormsApp1_july_5\\WinFormsApp1_july_5\\WinFormsApp1_july_5.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Valued Customer\\.nuget\\packages\\guna.ui2.winforms\\2.0.3.5\\guna.ui2.winforms.2.0.3.5.nupkg.sha512",
+    "C:\\Users\\Valued Customer\\.nuget\\packages\\krypton.components.suite\\4.5.9\\krypton.components.suite.4.5.9.nupkg.sha512",
     "C:\\Users\\Valued Customer\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Valued Customer\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\Valued Customer\\.nuget\\packages\\runtime.native.system.data.sqlclient.sni\\4.7.0\\runtime.native.system.data.sqlclient.sni.4.7.0.nupkg.sha512",
@@ -14,5 +16,26 @@
     "C:\\Users\\Valued Customer\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
     "C:\\Users\\Valued Customer\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Guna.UI2.WinForms 2.0.3.5' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Guna.UI2.WinForms",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'Krypton.Components.Suite 4.5.9' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework 'net6.0-windows7.0'. This package may not be fully compatible with your project.",
+      "libraryId": "Krypton.Components.Suite",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
 }
